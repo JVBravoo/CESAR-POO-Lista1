@@ -29,14 +29,14 @@ public class Estatistica {
 			}
 		while(MaiorValor >= counter);
 		
-		return soma/counter;
+		return soma/MaiorValor;
 		
 	}
 	
 	public double variancia() {
 		
-		double variancia = 0;
-		double counter = 1;
+		double variancia = 1;
+		double counter = 0;
 		
 		
 		for (double t = 0; t < MaiorValor; t++) {
@@ -51,10 +51,10 @@ public class Estatistica {
 		
 		while(counter <= MaiorValor) {
 			if (counter % 2 == 0) {
-				System.out.println(counter + "é par!");
+				System.out.println(counter + " é par!");
 			}
 			else {
-				System.out.println(counter + "é ímpar!");
+				System.out.println(counter + " é ímpar!");
 			}
 			counter++;
 		}
@@ -69,5 +69,7 @@ public class Estatistica {
 		System.out.println(peace.media());
 		System.out.println(peace.variancia());
 		peace.imPar();
+		
+		scan.close();
 	}
 }
